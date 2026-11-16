@@ -22,3 +22,8 @@ A small Python tool that checks IFC models exported from Revit for missing param
 As a BIM coordinator, I often had to check models for missing data by hand. This is the first step toward automating that process.
 
 ![Summary sheet](summary.PNG)
+
+## pyRevit button
+A pyRevit extension that runs the same check inside Revit and lists walls with a missing FireRating, with clickable element IDs.
+
+![Summary sheet](pyrevitbutton.PNG)
