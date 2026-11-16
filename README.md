@@ -26,4 +26,4 @@ As a BIM coordinator, I often had to check models for missing data by hand. This
 ## pyRevit button
 A pyRevit extension that runs the same check inside Revit and lists walls with a missing FireRating, with clickable element IDs.
 
-![Summary sheet](pyrevitbutton.PNG)
+![Summary sheet](pyrevitbutton.png)
