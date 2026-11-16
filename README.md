@@ -21,4 +21,4 @@ A small Python tool that checks IFC models exported from Revit for missing param
 ## Why I built it
 As a BIM coordinator, I often had to check models for missing data by hand. This is the first step toward automating that process.
 
-![Summary sheet](summary.png)
+![Summary sheet](summary.PNG)
