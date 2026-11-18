@@ -14,6 +14,10 @@
 2. Put `BimTools.extension` in a folder, then in pyRevit Settings add that folder under Custom Extension Directories.
 3. Click Save Settings and Reload.
 
+   
+![Summary sheet](summary.PNG)
+
 ![Summary sheet](pyrevitbutton.png)
+
 ![Summary sheet](namingcheck.png)
 
