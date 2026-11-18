@@ -17,7 +17,7 @@ Small Python tools that check BIM models for missing data, for use by BIM coordi
 ![Summary sheet](summary.PNG)
 
 ## pyRevit extension
-`BimTools.extension` adds a "Checks" tab to Revit with five read-only tools. They never change the model. Results open in a table with clickable element IDs, and most tools can export to CSV.
+`BimTools.extension` adds a "Checks" tab to Revit with seven tools. Five are read-only checks. Results open in a table with clickable element IDs, and most can export to CSV. `ParameterImport` is the only tool that writes to the model, and it always shows a preview and asks for confirmation first. Try it on a copy of your model; one Ctrl+Z undoes the whole import.
 
 | Tool | What it checks |
 |---|---|
@@ -26,6 +26,8 @@ Small Python tools that check BIM models for missing data, for use by BIM coordi
 | RoomCheck | Unplaced, unenclosed, unnamed and duplicate-number rooms |
 | ParameterCheck | Pick categories and any parameter, list elements where it is empty |
 | NamingCheck | Sheet numbers and view names against a configurable pattern |
+| ParameterExport | Exports editable text parameters of one category to CSV for editing in Excel |
+| ParameterImport | Reads the edited CSV, shows a preview of the changes, then writes them to the model after confirmation |
 
 ### Install
 1. Install [pyRevit](https://github.com/pyrevitlabs/pyRevit).
