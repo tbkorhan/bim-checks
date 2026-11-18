@@ -1,3 +1,21 @@
+# BIM Checks for Revit and IFC
+
+Small Python tools that check BIM models for missing data, for use by BIM coordinators.
+
+## IFC checker (Python script)
+`check_elements.py` reads an IFC model exported from Revit, checks walls, doors and windows for missing parameters (FireRating, IsExternal, LoadBearing) and writes `report.xlsx` with a summary sheet.
+
+### Requirements
+- Python 3
+- `pip install ifcopenshell openpyxl`
+
+### Usage
+1. Export your Revit model as IFC (with "Export IFC common property sets" enabled)
+2. Put the file next to the script and set its name in `IFC_FILE` at the top of the script
+3. Run: `python check_elements.py`
+
+![Summary sheet](summary.PNG)
+
 ## pyRevit extension
 `BimTools.extension` adds a "Checks" tab to Revit with five read-only tools. They never change the model. Results open in a table with clickable element IDs, and most tools can export to CSV.
 
@@ -14,8 +32,6 @@
 2. Put `BimTools.extension` in a folder, then in pyRevit Settings add that folder under Custom Extension Directories.
 3. Click Save Settings and Reload.
 
-   
-![Summary sheet](summary.PNG)
 
 ![Summary sheet](pyrevitbutton.png)
 
