@@ -1,29 +1,19 @@
-# IFC Element Parameter Checker
+## pyRevit extension
+`BimTools.extension` adds a "Checks" tab to Revit with five read-only tools. They never change the model. Results open in a table with clickable element IDs, and most tools can export to CSV.
 
-A small Python tool that checks IFC models exported from Revit for missing parameters on walls, doors and windows, and writes the result to Excel.
+| Tool | What it checks |
+|---|---|
+| ElementCheck | Walls, doors and windows with a missing FireRating |
+| ModelHealth | Warnings, imported CAD files, in-place families, views not on sheets |
+| RoomCheck | Unplaced, unenclosed, unnamed and duplicate-number rooms |
+| ParameterCheck | Pick categories and any parameter, list elements where it is empty |
+| NamingCheck | Sheet numbers and view names against a configurable pattern |
 
-## What it does
-- Reads all IfcWall, IfcDoor and IfcWindow elements from an IFC file
-- Checks FireRating, IsExternal (and LoadBearing for walls) in the standard Pset_*Common property sets
-- Outputs report.xlsx with four sheets:
-  - Summary: missing count and percentage per element type and parameter
-  - Walls, Doors, Windows: one row per element, marked OK or MISSING
-
-## Requirements
-- Python 3
-- pip install ifcopenshell openpyxl
-
-## Usage
-1. Export your Revit model as IFC (with "Export IFC common property sets" enabled)
-2. Put the file next to the script and set its name in IFC_FILE at the top of the script
-3. Run: python check_elements.py
-
-## Why I built it
-As a BIM coordinator, I often had to check models for missing data by hand. This is the first step toward automating that process.
-
-![Summary sheet](summary.PNG)
-
-## pyRevit button
-A pyRevit extension that runs a similar check inside Revit: it lists walls with a missing FireRating, with clickable element IDs that select the wall in the model, and exports the list to CSV.
+### Install
+1. Install [pyRevit](https://github.com/pyrevitlabs/pyRevit).
+2. Put `BimTools.extension` in a folder, then in pyRevit Settings add that folder under Custom Extension Directories.
+3. Click Save Settings and Reload.
 
 ![Summary sheet](pyrevitbutton.png)
+![Summary sheet](namingcheck.png)
+
